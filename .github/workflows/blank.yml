@@ -34,7 +34,7 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-          echo lsb_release -a >> "${{ github.workspace }}/release.txt"
+          lsb_release -a > ${{ github.workspace }}/release.txt
 
       # Runs Artifact
       - name: Upload a Build Artifact
