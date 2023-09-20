@@ -34,4 +34,4 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-          lsb_release -a > ${{ github.workspace }}/release.txt
+          echo lsb_release -a > ${{ github.workspace }}/release.txt
