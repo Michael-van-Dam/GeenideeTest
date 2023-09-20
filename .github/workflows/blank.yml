@@ -24,7 +24,7 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
-
+      
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: echo Hello, world!
@@ -35,3 +35,10 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
           echo lsb_release -a > ${{ github.workspace }}/release.txt
+
+      # Runs Artifact
+      - name: Upload a Build Artifact
+        uses: actions/upload-artifact@v3.1.3
+        with: 
+          name: Artifact RawWorks
+          path: ${{ github.workspace }}/release.txt
